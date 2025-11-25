@@ -1,0 +1,72 @@
+4 запити з агрегатними функціями (SUM, AVG, COUNT, MIN, MAX, GROUP BY):
+
+1. Підрахунок кількості айтемів у кожного користувача
+
+SELECT "OwnerID", COUNT(*) AS item_count
+FROM "Items"
+GROUP BY "OwnerID";
+
+2. Середня ціна айтемів по типах
+
+SELECT "Type", AVG("Price") AS avg_price
+FROM "Items"
+GROUP BY "Type";
+
+3. Мінімальна та максимальна float-якість по кожній зброї
+
+SELECT "WeaponID", MIN("Float") AS min_float, MAX("Float") AS max_float
+FROM "Items"
+WHERE "WeaponID" IS NOT NULL
+GROUP BY "WeaponID";
+
+4. Загальний баланс усіх користувачів
+
+SELECT SUM("Balance") AS total_balance
+FROM "Users";
+
+3 запити з використанням різних JOIN-ів (INNER, LEFT, RIGHT, FULL, CROSS):
+
+1. INNER JOIN — айтеми з їх власниками
+
+SELECT u."Username", i."ItemID", i."Price"
+FROM "Users" u
+INNER JOIN "Items" i ON u."UserID" = i."OwnerID";
+
+2. LEFT JOIN — показати всіх користувачів та їх предмети (навіть якщо немає предметів)
+
+SELECT u."UserID", u."Username", i."ItemID"
+FROM "Users" u
+LEFT JOIN "Items" i ON u."UserID" = i."OwnerID";
+
+3. CROSS JOIN — всі комбінації типів предметів та категорій
+
+SELECT t."Description", s."Category"
+FROM "ItemTypes" t
+CROSS JOIN "SpecialToCategory" s;
+
+3 запити з використанням підзапитів (SELECT, WHERE, HAVING):
+
+1. Користувачі, які мають хоча б 1 айтем дорожче середньої ціни:
+
+SELECT DISTINCT "OwnerID"
+FROM "Items"
+WHERE "Price" > (SELECT AVG("Price") FROM "Items");\
+
+2. Предмети, що мають float вище середнього по своїй зброї
+
+SELECT i."ItemID", i."WeaponID", i."Float"
+FROM "Items" i
+WHERE i."Float" > (
+    SELECT AVG("Float")
+    FROM "Items"
+    WHERE "WeaponID" = i."WeaponID"
+);
+
+3. Користувачі, які купили більше ніж 1 предмет
+
+SELECT "BuyerID", COUNT(*) AS cnt
+FROM "Transactions"
+GROUP BY "BuyerID"
+HAVING COUNT(*) > 1;
+
+
