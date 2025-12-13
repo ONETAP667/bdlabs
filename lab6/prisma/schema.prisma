@@ -1,0 +1,96 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ItemTypes {
+  TypeID      Int     @id @default(autoincrement())
+  Description String? @db.VarChar(256)
+  Items       Items[]
+}
+
+model Items {
+  ItemID            Int                @id @default(autoincrement())
+  OwnerID           Int
+  Preview           String?
+  Price             Int                @default(0)
+  Type              Int?
+  WeaponID          Int?
+  SkinID            Int                @default(0)
+  Special           Int
+  Float             Float              @default(0.0)
+  Pattern           Int                @default(0)
+  Nametag           String?            @db.VarChar(256)
+  Charm             Int?
+  CharmPattern      Int?
+  Users             Users              @relation(fields: [OwnerID], references: [UserID], onDelete: NoAction, onUpdate: NoAction)
+  SpecialToCategory SpecialToCategory  @relation(fields: [Special], references: [SpecialID], onDelete: NoAction, onUpdate: NoAction)
+  ItemTypes         ItemTypes?         @relation(fields: [Type], references: [TypeID], onDelete: NoAction, onUpdate: NoAction)
+  WeaponIDToWeapon  WeaponIDToWeapon?  @relation(fields: [WeaponID], references: [WeaponID], onDelete: NoAction, onUpdate: NoAction)
+  StickersOnWeapon  StickersOnWeapon[]
+  Transactions      Transactions[]
+
+  ItemPreview ItemPreviews?
+}
+
+model SpecialToCategory {
+  SpecialID Int     @id @default(autoincrement())
+  Category  String  @db.VarChar(256)
+  Items     Items[]
+}
+
+model StickersOnWeapon {
+  ID        Int     @id @default(autoincrement())
+  ItemID    Int?
+  StickerID Int
+  Preview   String?
+  PositionX Float
+  PositionY Float
+  Rotation  Float   @default(0.0)
+  Wear      Float   @default(0.0)
+  Scale     Float   @default(1.0)
+  Items     Items?  @relation(fields: [ItemID], references: [ItemID], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Transactions {
+  TransactionID                      Int      @id @default(autoincrement())
+  SellerID                           Int?
+  BuyerID                            Int?
+  ItemID                             Int?
+  Price                              Int
+  Date                               DateTime @db.Timestamptz(6)
+  Users_Transactions_BuyerIDToUsers  Users?   @relation("Transactions_BuyerIDToUsers", fields: [BuyerID], references: [UserID], onDelete: NoAction, onUpdate: NoAction)
+  Items                              Items?   @relation(fields: [ItemID], references: [ItemID], onDelete: NoAction, onUpdate: NoAction)
+  Users_Transactions_SellerIDToUsers Users?   @relation("Transactions_SellerIDToUsers", fields: [SellerID], references: [UserID], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model Users {
+  UserID                                    Int            @id @default(autoincrement())
+  Username                                  String         @db.VarChar(256)
+  Balance                                   Int            @default(0)
+  DateJoined                                DateTime       @default(now()) @db.Timestamptz(6)
+  RestrictionType                           Int?
+  RestrictedUntil                           DateTime?      @db.Timestamptz(6)
+isActive Boolean @default(true)  
+Items                                     Items[]
+  Transactions_Transactions_BuyerIDToUsers  Transactions[] @relation("Transactions_BuyerIDToUsers")
+  Transactions_Transactions_SellerIDToUsers Transactions[] @relation("Transactions_SellerIDToUsers")
+}
+
+model WeaponIDToWeapon {
+  WeaponID Int     @id @default(autoincrement())
+  Weapon   String  @db.VarChar(256)
+  Items    Items[]
+}
+
+model ItemPreviews {
+  ItemID Int   @id
+  Preview Bytes?
+
+  Items Items @relation(fields: [ItemID], references: [ItemID], onDelete: Cascade)
+}
