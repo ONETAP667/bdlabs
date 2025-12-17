@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.762,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.h=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\SelectUser.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.272,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.h=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\SelectUserWeaponsForm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.762,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.dfm=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\SelectUser.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\MainFrm.dfm=G:\ebcdNPT\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.551,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\WeaponDB.cbproj=G:\ebcdNPT\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.425,=G:\ebcdNPT\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.272,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.dfm=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\SelectUserWeaponsForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.219,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\WeaponDBPCH1.h=G:\ebcdNPT\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\MainFrm.cpp=G:\ebcdNPT\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.247,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\AddItem.h=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\ItemsEditor.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.247,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\AddItem.cpp=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\ItemsEditor.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.621,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\MainFrm.h=G:\ebcdNPT\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.526,=G:\ebcdNPT\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.784,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.cpp=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\AddItem.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.451,=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.553,=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.247,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\AddItem.dfm=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\ItemsEditor.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.784,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.h=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\AddItem.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.015,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.h=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\UserParsForm.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.015,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.cpp=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\UserParsForm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.762,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.cpp=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\SelectUser.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.630,=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.272,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.cpp=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\SelectUserWeaponsForm.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.015,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.dfm=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\UserParsForm.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.784,G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit2.dfm=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\AddItem.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.178,=G:\ebcdNPT\den\2nd_course\db_labs\Kurs\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
