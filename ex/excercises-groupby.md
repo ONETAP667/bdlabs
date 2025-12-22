@@ -22,7 +22,7 @@ ORDER BY c.student_year;
 ```
 
 **Тут:**
-study_year - Рік навчання
+study_year - Рік навчання;
 graded_count - Кількість виставлених оцінок
 avg_grade - Середній бал
 passed_count - Кількість складених дисциплін
