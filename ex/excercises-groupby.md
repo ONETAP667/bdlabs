@@ -101,10 +101,10 @@ ORDER BY c.student_year;
 
 **Тут:**
 
-* study_year - рік навчання
-* courses_count - кількість курсів
-* enrolments_count - кількість записів
-* students_with_grades - кількість студентів, що вже отримали бали
+* study_year - Рік навчання
+* courses_count - Кількість курсів
+* enrolments_count - Кількість записів
+* students_with_grades - Кількість студентів, що вже отримали бали
 
 **Скріншот:**
 <img width="2560" alt="scr3" src="https://github.com/ONETAP667/bdlabs/blob/main/ex/screx1/scr3.png">
